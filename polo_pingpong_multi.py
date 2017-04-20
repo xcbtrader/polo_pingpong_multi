@@ -147,7 +147,7 @@ coins = ['BTC', 'LTC', 'ETH', 'DASH', 'XRP', 'ETC', 'XMR']
 
 porcentaje_inv = 0.0
 while porcentaje_inv <5 or porcentaje_inv>100:
-	m = str(input('Entra margen de beneficio BTC(>=5) :? '))
+	m = str(input('Entra Porcentaje del Saldo USDT a Invertir(>=5) :? '))
 	porcentaje_inv = float(m.replace(',','.'))
 
 porcentaje_inv = porcentaje_inv/100
