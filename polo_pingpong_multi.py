@@ -146,7 +146,7 @@ while err:
 coins = ['BTC', 'LTC', 'ETH', 'DASH', 'XRP', 'ETC', 'XMR']
 
 porcentaje_inv = 0.0
-while porcentaje_inv <5:
+while porcentaje_inv <5 or porcentaje_inv>100:
 	m = str(input('Entra margen de beneficio BTC(>=5) :? '))
 	porcentaje_inv = float(m.replace(',','.'))
 
