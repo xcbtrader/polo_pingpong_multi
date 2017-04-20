@@ -123,8 +123,8 @@ print('         INICIANDO BOT POLONIEX PingPong MULTI COIN')
 print('**************************************************************')
 print('')
 
-API_key = 'AQUI PONER NUESTRA API KEY'
-Secret = 'AQUI PONER NUESTRO SECRET'
+API_key = 'PONER AQUI NUESTRA API_KEY'
+Secret = 'PONER AQUI NUESTRO SECRET'
 
 err = True
 while err:
@@ -144,6 +144,13 @@ while err:
 
 
 coins = ['BTC', 'LTC', 'ETH', 'DASH', 'XRP', 'ETC', 'XMR']
+
+porcentaje_inv = 0.0
+while porcentaje_inv <5:
+	m = str(input('Entra margen de beneficio BTC(>=5) :? '))
+	porcentaje_inv = float(m.replace(',','.'))
+
+porcentaje_inv = porcentaje_inv/100
 
 margenBTC = 0.0
 while margenBTC <0.15:
@@ -176,7 +183,7 @@ saldoUSDTinv = 0.0
 
 saldoUSDT, s = leer_balance('BTC')
 
-saldoUSDTinv = (saldoUSDT/len(coins)) * 0.98
+saldoUSDTinv = ((saldoUSDT * porcentaje_inv)/len(coins)) * 0.98
 n = 1
 
 while True:
